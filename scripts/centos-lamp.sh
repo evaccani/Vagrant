@@ -6,6 +6,10 @@ yum update -y --exclude=kernel
 # Tools
 yum install -y nano git unzip screen
 
+# Firewall Service Stop
+service iptables stop
+chkconfig iptables off
+
 # Apache
 yum install -y httpd httpd-devel httpd-tools
 chkconfig --add httpd
